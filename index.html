@@ -68,7 +68,7 @@ body {
   <div style="float:right;">
   <a onclick="joinRoom()">Join</a>
   <a onclick="createRoom()">Create</a>
-  <a href="about.html">About</a>
+  <a href="https:www.pranavsai.ml">About</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
@@ -279,7 +279,7 @@ button{
             getUserMedia({ video: true, audio: true }, (stream) => {
                 local_stream = stream;
                 setLocalStream(local_stream)
-                notify("Joining peer")
+                notify("Joining peer...")
                 let call = peer.call(room_id, stream)
                 call.on('stream', (stream) => {
                     setRemoteStream(stream);
@@ -296,7 +296,7 @@ button{
         if (screenSharing) {
             stopScreenSharing()
         }
-        navigator.mediaDevices.getDisplayMedia({ video: true }).then((stream) => {
+        navigator.mediaDevices.getDisplayMedia({ video: true ,audio:true }).then((stream) => {
             screenStream = stream;
             let videoTrack = screenStream.getVideoTracks()[0];
             videoTrack.onended = () => {
