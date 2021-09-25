@@ -142,7 +142,7 @@ start.addEventListener('click', async function(){
 
 
 
-async function recordScreen() {
+async function record() {
     return await navigator.mediaDevices.getDisplayMedia({
         audio: true, 
         video: { mediaSource: "screen"}
