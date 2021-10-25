@@ -49,7 +49,13 @@ notify("World Chat Update Added : 10/16/2021 4:05pm")
         video.srcObject = stream;
         video.play();
     }
-    
+   function tv() {
+       var e = document.getElementById("local_video");
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
     function hideModal() {
         document.getElementById("entry-modal").hidden = true
     }
